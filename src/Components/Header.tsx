@@ -67,6 +67,7 @@ const Container = styled.div`
       display: flex;
       align-items: center;
       padding: 4px;
+      cursor: pointer;
 
       input {
         appearance: none;
@@ -75,6 +76,7 @@ const Container = styled.div`
         border-radius: 50%;
         background-color: #ffffff;
         transition: all 0.15s;
+        cursor: pointer;
       }
     }
   }

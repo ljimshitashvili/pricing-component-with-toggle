@@ -2,18 +2,23 @@ import styled from "styled-components";
 
 interface Props {
   cardName: string;
+  toggle: boolean;
 }
 
-export default function Card({ cardName }: Props) {
+export default function Card({ cardName, toggle }: Props) {
   return (
-    <Container cardName={cardName}>
+    <Container toggle={toggle} cardName={cardName}>
       <h1>{cardName}</h1>
       <h2>
         ${" "}
         <span>
           {cardName === "Basic"
-            ? "19.99"
-            : `${cardName === "Professional" ? "24.99" : "39.99"}`}
+            ? `${toggle ? "199.99" : "19.99"}`
+            : `${
+                cardName === "Professional"
+                  ? `${toggle ? "249.99" : "24.99"}`
+                  : `${toggle ? "399.99" : "39.99"}`
+              }`}
         </span>
       </h2>
       <div>

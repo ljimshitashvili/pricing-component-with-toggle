@@ -12,7 +12,7 @@ function App() {
   return (
     <Container>
       <Header toggle={toggle} setToggle={setToggle} />
-      <Main />
+      <Main toggle={toggle} />
     </Container>
   );
 }
@@ -27,4 +27,7 @@ const Container = styled.div`
   background-repeat: no-repeat;
   background-position: right -193px top 0;
   padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
