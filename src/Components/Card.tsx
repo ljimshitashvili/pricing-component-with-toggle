@@ -9,15 +9,36 @@ export default function Card({ cardName }: Props) {
     <Container cardName={cardName}>
       <h1>{cardName}</h1>
       <h2>
-        $ <span>19.99</span>
+        ${" "}
+        <span>
+          {cardName === "Basic"
+            ? "19.99"
+            : `${cardName === "Professional" ? "24.99" : "39.99"}`}
+        </span>
       </h2>
       <div>
         <hr />
-        <p>500 gb storage</p>
+        <p>
+          {cardName === "Basic"
+            ? "500 GB"
+            : `${cardName === "Professional" ? "1 TB" : "2 TB"}`}{" "}
+          Storage
+        </p>
         <hr />
-        <p>2user allowed</p>
+        <p>
+          {cardName === "Basic"
+            ? "2"
+            : `${cardName === "Professional" ? "5" : "10"}`}{" "}
+          Users Allowed
+        </p>
         <hr />
-        <p>send up to 3gb</p>
+        <p>
+          Send up to{" "}
+          {cardName === "Basic"
+            ? "3"
+            : `${cardName === "Professional" ? "10" : "20"}`}{" "}
+          GB
+        </p>
         <hr />
       </div>
       <button>LEARN MORE</button>
