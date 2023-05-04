@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Header from "./Components/Header";
 import Main from "./Components/Main";
 
-// import bgBottom from "./Images/bg-bottom.svg";
+import bgBottom from "./Images/bg-bottom.svg";
 import bgTop from "./Images/bg-top.svg";
 import { useState } from "react";
 
@@ -30,4 +30,9 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: 1024px) {
+    background-image: url(${bgTop}), url(${bgBottom});
+    background-position: right -93px top 0, bottom 0 left 0;
+  }
 `;

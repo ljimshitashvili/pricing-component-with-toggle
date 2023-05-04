@@ -64,7 +64,7 @@ const Container = styled.div<Props>`
     p.cardName === "Professional"
       ? "linear-gradient(135deg, #A2A7F0 0.06%, #696EDD 100.06%)"
       : "white"};
-  margin-bottom: ${(p: Props) => (p.cardName === "Master" ? "71px" : "none")};
+  height: fit-content;
 
   h1 {
     font-size: 18px;
@@ -134,5 +134,21 @@ const Container = styled.div<Props>`
       p.cardName === "Professional" ? "#6D72DE" : "white"};
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
+    cursor: pointer;
+  }
+
+  @media (min-width: 1024px) {
+    padding: ${(p: Props) =>
+      p.cardName === "Professional" ? "54.5px 31px" : "31px"};
+
+    button:hover {
+      outline: ${(p: Props) =>
+        p.cardName === "Professional"
+          ? "1px solid white"
+          : "1px solid #6D72DE"};
+      background: transparent;
+      color: ${(p: Props) =>
+        p.cardName === "Professional" ? "white" : " #6D72DE"};
+    }
   }
 `;

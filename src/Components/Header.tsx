@@ -80,4 +80,10 @@ const Container = styled.div`
       }
     }
   }
+
+  @media (min-width: 1024px) {
+    label:hover {
+      opacity: 0.5;
+    }
+  }
 `;
